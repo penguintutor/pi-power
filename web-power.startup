@@ -1,0 +1,30 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          webpower
+# Required-Start:    $local_fs
+# Required-Stop:     $local_fs
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start/stop web-power
+### END INIT INFO
+# More details see:
+# http://www.penguintutor.com/
+
+
+eval cd /home/pi/pi-power
+case "$1" in
+  start)
+    /home/pi/pi-power/web-power.py
+    echo "Starting web-power "
+    ;;
+  stop)
+    pkill web-power.py
+    echo "web-power stopped"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/web-power {start|stop}"
+    exit 1
+    ;;
+esac
+exit 0
+
