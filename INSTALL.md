@@ -1,7 +1,14 @@
-** Warning - this software does not require any authentication
-** Anyone with access to the network that the Raspberry Pi is on can 
-turn the sockets on and off.
+Install instructions for pi-power
+=================================
 
+These are the instructions for installing pi-power on a Raspberry Pi.
+For more details see [www.penguintutor.com/pi-power](www.penguintutor.com/pi-power)
+
+
+
+__Warning - this software does not require any authentication__
+**Anyone with access to the network that the Raspberry Pi is on can 
+turn the sockets on and off.**
 
 
 
@@ -31,7 +38,6 @@ The program is designed to run standalone without any other web servers installe
 
 
 The menu options can be customized by editing the index.html file.
-
 
 
 The program can be set to startup automatically by copying the startup script to init.d
