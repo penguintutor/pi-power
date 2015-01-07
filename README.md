@@ -9,6 +9,6 @@ Visit the project web page at [PenguinTutor.com/pi-power](http://www.penguintuto
 
 Credits:
 Created by [Stewart Watkiss](https://github.com/penguintutor)
-This includes the Energenie module code created by [Amy Mather](https://github.com/MiniGirlGeek).
+Uses the Python energenie module available on [PythonHosted] (http://pythonhosted.org/energenie)
 
 

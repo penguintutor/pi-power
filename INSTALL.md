@@ -22,6 +22,9 @@ To install bottle enter the following two commands whilst connected to the Inter
 sudo apt-get install python-pip
 sudo pip install bottle
 
+The energenie module is also required 
+
+sudo pip install energenie
 
 
 After extracting the files from the tar file run the web-power.py script as root.
@@ -29,6 +32,11 @@ After extracting the files from the tar file run the web-power.py script as root
 ie.:
 
 $ sudo ./web-power.py
+
+The code is configured to use the standard http port, which is port 80. 
+If you already have a web server running (eg. Apache / Lighttpd) then the port number will need to be changed in the web-power.py file first.
+
+
 
 Connect to the webserver using a web browser. You will need to know the ip address which can be found using:
 
