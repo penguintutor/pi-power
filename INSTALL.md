@@ -15,16 +15,17 @@ turn the sockets on and off.**
 This program uses the Python Bottle library.
 
 It is important to install bottle through pip (or manually if you prefer)
-as the version installed using apt-get on the Raspberry Pi will not work
+as the version installed using apt-get on the Raspberry Pi will not work.
+
+This program should be installed into directory /home/pi/pi-power, or alternatively edit the path DOCUMENT_ROOT contained within web-power.py
 
 To install bottle enter the following two commands whilst connected to the Internet.
 
-sudo apt-get install python-pip
-sudo pip install bottle
+sudo pip3 install bottle
 
 The energenie module is also required 
 
-sudo pip install energenie
+sudo pip3 install energenie
 
 
 After extracting the files from the tar file run the web-power.py script as root.
@@ -35,7 +36,6 @@ $ sudo ./web-power.py
 
 The code is configured to use the standard http port, which is port 80. 
 If you already have a web server running (eg. Apache / Lighttpd) then the port number will need to be changed in the web-power.py file first.
-
 
 
 Connect to the webserver using a web browser. You will need to know the ip address which can be found using:
