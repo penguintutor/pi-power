@@ -51,8 +51,11 @@ The menu options can be customized by editing the index.html file.
 The program can be set to startup automatically by copying the startup script to init.d
 
 sudo cp web-power.startup /etc/init.d/web-power 
+
 sudo chown root:root /etc/init.d/web-power
+
 sudo chmod 755 /etc/init.d/web-power
-sudo update-rc.d web-power
+
+sudo update-rc.d web-power defaults
 
 
