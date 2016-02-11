@@ -10,4 +10,6 @@ div#centre {
     background-color: #CCCCCC;
 }
 
-
+.imgonbutton, .imgoffbutton {
+    cursor: pointer;
+}
