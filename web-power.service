@@ -1,0 +1,15 @@
+# Startup file for web-power Energenie remote control
+# http://www.penguintutor.com/raspberrypi/pi-power
+                
+[Unit]
+Description=Web Power Control using Energenie
+After=sshd.service
+
+[Service]
+Type=simple
+ExecStart=/home/pi/pi-power/web-power.py
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
