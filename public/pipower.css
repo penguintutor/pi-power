@@ -23,10 +23,8 @@ html, body {
 }
 
 .flex-item-on {
-  background: mediumseagreen;
   width: 50%;
   box-sizing: border-box;
-  margin-top: 8px;
   color: white;
   font-weight: bold;
   font-size: 3em;
@@ -40,13 +38,16 @@ html, body {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  padding-left: 4px;
+  padding-right: 2px;
+  padding-bottom: 4px;
+  background-image: linear-gradient(mediumseagreen, mediumseagreen), linear-gradient(darkslategrey, darkslategrey);
+  background-clip: content-box, padding-box;
 }
 
 .flex-item-off {
-  background: tomato;
   width: 50%;
   box-sizing: border-box;
-  margin-top: 8px;
   color: white;
   font-weight: bold;
   font-size: 3em;
@@ -60,6 +61,12 @@ html, body {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 0px;
+  background-image: linear-gradient(tomato, tomato), linear-gradient(darkslategrey, darkslategrey);
+  background-clip: content-box, padding-box;
 }
 .flex-item-header {
   background: darkslategrey;
