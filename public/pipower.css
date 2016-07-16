@@ -26,8 +26,8 @@ html, body {
   width: 50%;
   box-sizing: border-box;
   color: white;
+  font-size: 7vw;
   font-weight: bold;
-  font-size: 3em;
   text-align: center;
   flex-grow: 1;
   flex-shrink: 1;
@@ -49,8 +49,8 @@ html, body {
   width: 50%;
   box-sizing: border-box;
   color: white;
+  font-size: 7vw;
   font-weight: bold;
-  font-size: 3em;
   text-align: center;
   flex-grow: 1;
   flex-shrink: 1;
@@ -73,8 +73,8 @@ html, body {
   width: 100%;
   box-sizing: border-box;
   color: white;
+  font-size: 7vw;
   font-weight: bold;
-  font-size: 3em;
   text-align: center;
   flex-grow: 1;
   flex-shrink: 1;
