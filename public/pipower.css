@@ -1,15 +1,77 @@
 
-
-
-div#centre {
-    position:relative;
-    margin-left:auto;
-    margin-right:auto;
-    top: 20px;
-    width: 400px;
-    background-color: #CCCCCC;
+html, body {
+    height: 100%;
+    background-color: darkslategrey !important;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.imgonbutton, .imgoffbutton {
-    cursor: pointer;
+.flex-container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.flex-item-on {
+  background: mediumseagreen;
+  width: 50%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.flex-item-off {
+  background: tomato;
+  width: 50%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+.flex-item-header {
+  background: darkslategrey;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
