@@ -1,54 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Pi-power - socket control</title>
-<link href="public/pipower.css" rel="stylesheet" type="text/css">
-<!-- Add Jquery -->
-<script type="text/javascript" src="public/jquery.min.js"></script>
-<script type="text/javascript" src="public/pipower.js"></script>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="public/manifest.json">
+    <title>Pi-power - control</title>
+    <link href="public/pipower.css" rel="stylesheet" type="text/css">
+    <!-- Add Jquery -->
+    <script type="text/javascript" src="public/jquery.min.js"></script>
+    <script type="text/javascript" src="public/pipower.js"></script>
+    <!-- Add Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 </head>
 <body>
-
-<h1>Pi power web control</h1>
-
-<div id="centre">
-
-
-<table cols="3" cellspacing="0">
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 1</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_1" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_1" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 2</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_2" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_2" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 3</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_3" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_3" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">Socket 4</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_4" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_4" src="public/offbutton.png" alt="Off"></td>
-</tr>
-<tr class="buttons">
-    <td class="buttonname" cellspacing="0">All sockets</td>
-    <td class="onbutton" cellspacing="0"><img class="imgonbutton" id="sw_on_all" src="public/onbutton.png" alt="On"></td>
-    <td class="offbutton" cellspacing="0"><img class="imgoffbutton" id="sw_off_all" src="public/offbutton.png" alt="Off"></td>
-</tr>
-</table>
-
-
-<p>Cmd status : <span id="status">...</span></p>
-
-</div>
-
-
-
+    <ul class="flex-container">
+        <li class="flex-item-header">
+            Socket Control
+            <span id="status">...</span>
+        </li>
+        <li id="sw_on_1" class="flex-item-on">One</li>
+        <li id="sw_off_1" class="flex-item-off">One</li>
+        <li id="sw_on_2" class="flex-item-on">Two</li>
+        <li id="sw_off_2" class="flex-item-off">Two</li>
+        <li id="sw_on_3" class="flex-item-on">Three</li>
+        <li id="sw_off_3" class="flex-item-off">Three</li>
+        <li id="sw_on_4" class="flex-item-on">Four</li>
+        <li id="sw_off_4" class="flex-item-off">Four</li>
+        <li id="sw_on_all" class="flex-item-on">All</li>
+        <li id="sw_off_all" class="flex-item-off">All</li>
+    </ul>
 </body>
 </html>

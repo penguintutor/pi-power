@@ -1,15 +1,85 @@
 
-
-
-div#centre {
-    position:relative;
-    margin-left:auto;
-    margin-right:auto;
-    top: 20px;
-    width: 400px;
-    background-color: #CCCCCC;
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: darkslategrey !important;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.imgonbutton, .imgoffbutton {
-    cursor: pointer;
+.flex-container {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.flex-item-on {
+  width: 50%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 7vw;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  padding-left: 4px;
+  padding-right: 2px;
+  padding-bottom: 4px;
+  background-image: linear-gradient(mediumseagreen, mediumseagreen), linear-gradient(darkslategrey, darkslategrey);
+  background-clip: content-box, padding-box;
+}
+
+.flex-item-off {
+  width: 50%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 7vw;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 0px;
+  background-image: linear-gradient(tomato, tomato), linear-gradient(darkslategrey, darkslategrey);
+  background-clip: content-box, padding-box;
+}
+.flex-item-header {
+  background: darkslategrey;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 7vw;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
