@@ -20,6 +20,7 @@
 from gpiozero import Energenie
 import bottle
 from bottle import route, request, response, template, static_file
+import os
 
 sockets = [None]
 sockets.append(Energenie(1))
@@ -35,18 +36,11 @@ PORT = 80
 
 # Folder where this is installed and the index.html file is located
 # The index.html file is exposed to the webserver as well as any files in a subdirectory called public (ie. /home/pi/pi-power/public) 
-DOCUMENT_ROOT = '/home/pi/pi-power'
+DOCUMENT_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # Create the bottle web server
 app = bottle.Bottle()
 
-
-# public files
-# *** WARNING ANYTHING STORED IN THE PUBLIC FOLDER WILL BE AVAILABLE TO DOWNLOAD BY ANYONE CONNECTED TO THE SAME NETWORK ***
-@app.route ('/public/<filename>')
-def server_public (filename):
-    return static_file (filename, root=DOCUMENT_ROOT+"/public")
-    
 # Handle switch on request
 @app.route ('/switchon')
 def switchon():
@@ -63,8 +57,7 @@ def switchon():
         return 'Requested switch on ALL'
     else :
         return 'Invalid request'
-            
-        
+
 @app.route ('/switchoff')
 def switchoff():
     socket = int(request.query.socket)
@@ -80,11 +73,22 @@ def switchoff():
         return 'Requested switch off ALL'
     else:
         return 'Invalid request'
-        
+
+# public files
+# *** WARNING ANYTHING STORED IN THE PUBLIC FOLDER WILL BE AVAILABLE TO DOWNLOAD BY ANYONE CONNECTED TO THE SAME NETWORK ***
+@app.route ('/<filename>')
+def server_public (filename):
+    return static_file (filename, root=DOCUMENT_ROOT+"/public")
+@app.route ('/css/<filename>')
+def server_public (filename):
+    return static_file (filename, root=DOCUMENT_ROOT+"/public/css")
+@app.route ('/js/<filename>')
+def server_public (filename):
+    return static_file (filename, root=DOCUMENT_ROOT+"/public/js")
 
 # Serve up the default index.html page
 @app.route ('/')
 def server_home ():
-    return static_file ('index.html', root=DOCUMENT_ROOT)
+    return static_file ('index.html', root=DOCUMENT_ROOT+"/public")
 
-app.run(host=HOST, port=PORT)
+bottle.run(app, host=HOST, port=PORT)
