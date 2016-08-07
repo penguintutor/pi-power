@@ -1,0 +1,29 @@
+#centre {
+    position:relative;
+    margin: 20px auto;
+    width: 90vw;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px grey;
+}
+
+button {
+    min-width: 100px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.buttonname {
+    min-width: 100px;
+}
