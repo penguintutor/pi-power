@@ -40,7 +40,6 @@ DOCUMENT_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 # Create the bottle web server
 app = bottle.Bottle()
-bottle.debug(True)
 
 # Handle switch on request
 @app.route ('/switchon')
