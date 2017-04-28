@@ -71,6 +71,8 @@ Change these to custom names.
 
 The program can be set to startup automatically by copying the startup file to the systemd service folder and then enabling this.
 
+If you have previously changed the install path you will also have to ammend the `web-power.service` file so that it coresponds with your current file locations, failure to do this will result in the application not starting.
+
 ```bash
 sudo cp /home/pi/pi-power/web-power.service /etc/systemd/system/
 sudo systemctl enable web-power.service
