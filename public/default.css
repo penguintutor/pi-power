@@ -1,0 +1,15 @@
+
+
+
+div#centre {
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    top: 20px;
+    width: 400px;
+    background-color: #CCCCCC;
+}
+
+.imgonbutton, .imgoffbutton {
+    cursor: pointer;
+}

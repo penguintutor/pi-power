@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Web remote for the Energenie Pi remote
 # see http://www.penguintutor.com/
-# Copyright Stewart Watkiss 2014-2015
+# Copyright Stewart Watkiss 2014-2023
 
 
 # web-power is free software: you can redistribute it and/or modify
@@ -40,10 +40,12 @@ DOCUMENT_ROOT = '/home/pi/pi-power'
 # Create the bottle web server
 app = bottle.Bottle()
 
+bottle.TEMPLATE_PATH.insert(0,'/home/pi/pi-power/views/')
+
 
 # public files
 # *** WARNING ANYTHING STORED IN THE PUBLIC FOLDER WILL BE AVAILABLE TO DOWNLOAD BY ANYONE CONNECTED TO THE SAME NETWORK ***
-@app.route ('/public/<filename>')
+@app.route ('/public/<filename:path>')
 def server_public (filename):
     return static_file (filename, root=DOCUMENT_ROOT+"/public")
     
@@ -85,6 +87,6 @@ def switchoff():
 # Serve up the default index.html page
 @app.route ('/')
 def server_home ():
-    return static_file ('index.html', root=DOCUMENT_ROOT)
+    return template ('default_template', theme="default")
 
 app.run(host=HOST, port=PORT)
