@@ -33,6 +33,13 @@ HOST = ''
 # If using apache or another browser then change this to a different value
 PORT = 80
 
+# Template is the type of display 
+# - default is generic remote control 4x2 + all
+# - image is 4 images each with a background image and on / off buttons
+custom_template = "default"
+# Theme is a folder that can be used for custom images
+custom_theme = "default"
+
 # Folder where this is installed and the index.html file is located
 # The index.html file is exposed to the webserver as well as any files in a subdirectory called public (ie. /home/pi/pi-power/public) 
 DOCUMENT_ROOT = '/home/pi/pi-power'
@@ -87,6 +94,6 @@ def switchoff():
 # Serve up the default index.html page
 @app.route ('/')
 def server_home ():
-    return template ('default_template', theme="default")
+    return template (custom_template, theme=custom_theme)
 
 app.run(host=HOST, port=PORT)
