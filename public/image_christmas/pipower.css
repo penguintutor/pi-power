@@ -1,0 +1,62 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.container{
+  margin: 20px auto;
+  width:800px;
+  height:800px;
+  display:grid;
+  grid-template-columns: 400px 400px;
+  grid-row: 400px 400px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  .box{
+    padding:20px;
+    border-radius:10px;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+  }
+  .boximg{
+      width: 360px;
+      height: 360px;
+  }
+
+}
+
+
+
+div#image01 {
+    background-image: url("/public/image_christmas/image01.png");
+}
+div#image02 {
+    background-image: url("/public/image_christmas/image02.png");
+}
+div#image03 {
+    background-image: url("/public/image_christmas/image03.png");
+}
+div#image04 {
+    background-image: url("/public/image_christmas/image04.png");
+}
+
+h1#title {
+    text-align: center;
+}
+
+
+div#centre {
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    top: 20px;
+    width: 800px;
+}
+
+.imgonbutton, .imgoffbutton {
+    cursor: pointer;
+    padding: 40px 60px 20px 60px;
+}

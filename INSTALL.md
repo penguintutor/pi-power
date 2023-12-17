@@ -63,9 +63,19 @@ To assign a different port update the `PORT` entry in `web-power.py`. Setting th
 ### Change the install directory
 If installing to a directory other than `/home/pi/pi-power` then update the `DOCUMENT_ROOT` in `web-power.py` to the install folder.
 
-### Give the buttons user-friendly names
-The socket names (Socket 1) are coded directly into index.html
-Change these to custom names.
+### Customising using templates and themes
+The software supports templates and themes within those templates. The templates are stored in the views folder. 
+The default template is the initial template based on previous version of Pi-power. The image template provides a 2x2 image based display.
+These can be set using the variable:
+custom_template
+
+Within the template is support for themes. These are folders where custom images and CSS can be placed to customize the display. This can be setup using the variable: 
+custom_theme
+
+The images should be stored in a directory based on the template and theme name. For instance:
+custom_template = "image"
+custom_theme = "christmas"
+The folder name is image_christmas
 
 ## Setting the program to automatically start on boot
 
@@ -78,8 +88,8 @@ sudo systemctl enable web-power.service
 
 ## Turning the sockets on and off automatically
 
-In addition to using the web interfact the sockets can be set to switch on and off automatically. This can be achieved using cron and the crontab configuration file. 
+In addition to using the web interface the sockets can be set to switch on and off automatically. This can be achieved using cron and the crontab configuration file. 
 
 See the following page for more details:
-http://www.penguintutor.com/raspberrypi/pi-power 
+http://www.penguintutor.com/projects/pi-power 
 

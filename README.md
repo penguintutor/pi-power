@@ -12,4 +12,3 @@ Credits:
 Created by [Stewart Watkiss](https://github.com/penguintutor)
 Uses the Python Bottle and GPIO Zero Modules
 
-
