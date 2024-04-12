@@ -40,6 +40,11 @@ custom_template = "default"
 # Theme is a folder that can be used for custom images
 custom_theme = "default"
 
+# Customization links - useful when embedding (eg. PiQuarium)
+# link to home / previous
+home_link = "http://127.0.0.1"
+home_title = "Home"
+
 # Folder where this is installed and the index.html file is located
 # The index.html file is exposed to the webserver as well as any files in a subdirectory called public (ie. /home/pi/pi-power/public) 
 DOCUMENT_ROOT = '/home/pi/pi-power'
@@ -94,6 +99,6 @@ def switchoff():
 # Serve up the default index.html page
 @app.route ('/')
 def server_home ():
-    return template (custom_template, theme=custom_theme)
+    return template (custom_template, theme=custom_theme, homelink=home_link, hometitle=home_title)
 
 app.run(host=HOST, port=PORT)

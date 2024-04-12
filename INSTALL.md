@@ -36,13 +36,13 @@ cd /home/pi
 git clone https://github.com/penguintutor/pi-power.git
 ```
 
-This will install the program into directory `/home/pi/pi-power`. If using a different directory then you will need to edit the DOCUMENT_ROOT setting within web-power.py
+This will install the program into directory `pi-power` in your home director. If using a different directory then you will need to edit the DOCUMENT_ROOT and bottle.TEMPLATE_PATH settings within web-power.py (see later) and the ExecStart entry in the web-power.service script.
 
 
 The `web-power.py` script can then be run as root.
 
 ```bash
-sudo /home/pi/pi-power/web-power.py
+sudo ~/pi-power/web-power.py
 ```
 
 The code is configured to use the standard http port, which is port 80. 
@@ -61,7 +61,9 @@ The customizations are made in the configuration files for the program. If upgra
 To assign a different port update the `PORT` entry in `web-power.py`. Setting the port above 1024 will allow the program to be run as a normal user. 
 
 ### Change the install directory
-If installing to a directory other than `/home/pi/pi-power` then update the `DOCUMENT_ROOT` in `web-power.py` to the install folder.
+**Important**
+If installing to a directory other than `/home/pi/pi-power` then update the `DOCUMENT_ROOT` and `bottle.TEMPLATE_PATH` in `web-power.py` to the install folder.
+
 
 ### Customising using templates and themes
 The software supports templates and themes within those templates. The templates are stored in the views folder. 
@@ -77,14 +79,20 @@ custom_template = "image"
 custom_theme = "christmas"
 The folder name is image_christmas
 
+### Integration with other services
+To integrate with other web services then it can either be embedded through an iFrame, or you can have the other service link direct. The home_link and home_title variables can be used to provide a path back to the calling application if required.
+
 ## Setting the program to automatically start on boot
 
 The program can be set to startup automatically by copying the startup file to the systemd service folder and then enabling this.
 
 ```bash
-sudo cp /home/pi/pi-power/web-power.service /etc/systemd/system/
+sudo cp ~/pi-power/web-power.service /etc/systemd/system/
 sudo systemctl enable web-power.service
 ```
+
+***Important***
+If using a directory other than /home/pi then you will first need to update the ExecStart entry with the full path.
 
 ## Turning the sockets on and off automatically
 

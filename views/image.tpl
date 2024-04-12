@@ -10,6 +10,8 @@
 </head>
 <body>
 
+<p><a href="{{homelink}}">{{hometitle}}</a></p>
+
 <div id="centre">
 
 <h1 id="title">Pi power web control</h1>

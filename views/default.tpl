@@ -12,6 +12,8 @@
 
 <h1>Pi power web control</h1>
 
+<p><a href="{{homelink}}">{{hometitle}}</a></p>
+
 <div id="centre">
 
 
